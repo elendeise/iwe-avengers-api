@@ -1,24 +1,43 @@
-22:40:14.626 karate.env system property was: null 
-22:40:15.022 request:
+22:51:08.299 karate.env system property was: null 
+22:51:08.693 request:
 1 > GET https://0ddbvgsmx7.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
 1 > Host: 0ddbvgsmx7.execute-api.us-east-2.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 
-22:40:16.058 response time in milliseconds: 1035
-1 < 415
+22:51:09.790 response time in milliseconds: 1097
+1 < 200
 1 < Connection: keep-alive
-1 < Content-Length: 37
+1 < Content-Length: 76
 1 < Content-Type: application/json
-1 < Date: Fri, 10 Aug 2018 01:40:16 GMT
-1 < x-amz-apigw-id: LYn3_FWNiYcFkqw=
-1 < x-amzn-RequestId: 54d523dc-9c3e-11e8-b2ea-f74231033fcb
-{"message": "Unsupported Media Type"}
+1 < Date: Wed, 15 Aug 2018 01:51:09 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b73870d-6ed8e1fe59ec000a14105566;Sampled=0
+1 < x-amz-apigw-id: LpIKIGm1iYcFU8Q=
+1 < x-amzn-RequestId: ae875fc8-a02d-11e8-bde1-93c21f9f736d
+{"id":"sdsa-sasa-asas-sasa","name":"Iron Man","secretIdentity":"Tony Stark"}
 
-22:40:16.083 status code was: 415, expected: 200, response time: 1035, url: https://0ddbvgsmx7.execute-api.us-east-2.amazonaws.com/dev/avengers/sdsa-sasa-asas-sasa, response: {"message":"Unsupported Media Type"}
-22:40:16.096 karate.env system property was: null 
-22:40:16.109 request:
+22:51:09.835 karate.env system property was: null 
+22:51:09.841 request:
+1 > GET https://0ddbvgsmx7.execute-api.us-east-2.amazonaws.com/dev/avengers/invalid
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 0ddbvgsmx7.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+
+22:51:10.360 response time in milliseconds: 519
+1 < 404
+1 < Connection: keep-alive
+1 < Content-Length: 317
+1 < Content-Type: application/json
+1 < Date: Wed, 15 Aug 2018 01:51:10 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b73870e-92ddd8a492541140b990f068;Sampled=0
+1 < x-amz-apigw-id: LpIKOFQDiYcFdlQ=
+1 < x-amzn-RequestId: aee11893-a02d-11e8-b686-c1f0b71e986f
+{"errorMessage":"[NotFound] - Avenger id:invalidnot found","errorType":"com.iwe.avenger.lambda.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:24)","com.iwe.avengers.SearchAvengersHandler.handleRequest(SearchAvengersHandler.java:1)"]}
+
+22:51:10.370 karate.env system property was: null 
+22:51:10.375 request:
 1 > POST https://0ddbvgsmx7.execute-api.us-east-2.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -28,18 +47,19 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:40:16.689 response time in milliseconds: 580
+22:51:10.893 response time in milliseconds: 517
 1 < 201
 1 < Connection: keep-alive
-1 < Content-Length: 47
+1 < Content-Length: 68
 1 < Content-Type: application/json
-1 < Date: Fri, 10 Aug 2018 01:40:16 GMT
-1 < x-amz-apigw-id: LYn4GGsGiYcFc0g=
-1 < x-amzn-RequestId: 5534a9a2-9c3e-11e8-a67f-31f041594342
-{"id": "dsd", "secretIdentity": "Steve Rogers"}
+1 < Date: Wed, 15 Aug 2018 01:51:10 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b73870e-83cb80eeb4f23749739f0b68;Sampled=0
+1 < x-amz-apigw-id: LpIKUGyeiYcFaoQ=
+1 < x-amzn-RequestId: af3134ee-a02d-11e8-bc6f-4750c469d2e0
+{"id":"32","name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:40:16.699 karate.env system property was: null 
-22:40:16.701 request:
+22:51:10.904 karate.env system property was: null 
+22:51:10.906 request:
 1 > POST https://0ddbvgsmx7.execute-api.us-east-2.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -49,38 +69,56 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:40:17.269 response time in milliseconds: 567
+22:51:11.418 response time in milliseconds: 511
 1 < 201
 1 < Connection: keep-alive
-1 < Content-Length: 47
+1 < Content-Length: 68
 1 < Content-Type: application/json
-1 < Date: Fri, 10 Aug 2018 01:40:17 GMT
-1 < x-amz-apigw-id: LYn4MH-uCYcFq2A=
-1 < x-amzn-RequestId: 558e144d-9c3e-11e8-a29a-b3317b003048
-{"id": "dsd", "secretIdentity": "Steve Rogers"}
+1 < Date: Wed, 15 Aug 2018 01:51:11 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b73870f-5d2f9bf02c9be8522eb22fa0;Sampled=0
+1 < x-amz-apigw-id: LpIKZEiTCYcFa_Q=
+1 < x-amzn-RequestId: af84ac29-a02d-11e8-93f0-cbba733397fd
+{"id":"33","name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:40:17.280 karate.env system property was: null 
-22:40:17.284 request:
-1 > DELETE https://0ddbvgsmx7.execute-api.us-east-2.amazonaws.com/dev/avengers/asasa-dsdas-sadas-asdas
+22:51:11.427 karate.env system property was: null 
+22:51:11.432 request:
+1 > DELETE https://0ddbvgsmx7.execute-api.us-east-2.amazonaws.com/dev/avengers/aaaa-aaaa-aaaa-bbbb
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
-1 > Content-Length: 58
-1 > Content-Type: application/json; charset=UTF-8
 1 > Host: 0ddbvgsmx7.execute-api.us-east-2.amazonaws.com
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
-{"name":"Captain America","secretIdentity":"Steve Rogers"}
 
-22:40:17.818 response time in milliseconds: 534
+22:51:12.640 response time in milliseconds: 1208
 1 < 204
 1 < Connection: keep-alive
 1 < Content-Length: 0
 1 < Content-Type: application/json
-1 < Date: Fri, 10 Aug 2018 01:40:17 GMT
-1 < x-amz-apigw-id: LYn4RGiHiYcFRaw=
-1 < x-amzn-RequestId: 55e2c34e-9c3e-11e8-8106-e15d75794f68
+1 < Date: Wed, 15 Aug 2018 01:51:12 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b73870f-ba86c786afd5cc22e17c0564;Sampled=0
+1 < x-amz-apigw-id: LpIKeEJxiYcFnzA=
+1 < x-amzn-RequestId: afd58af0-a02d-11e8-91f8-1702f47d9339
 
-22:40:17.827 karate.env system property was: null 
-22:40:17.830 request:
+22:51:12.649 karate.env system property was: null 
+22:51:12.653 request:
+1 > DELETE https://0ddbvgsmx7.execute-api.us-east-2.amazonaws.com/dev/avengers/idinvalid
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Host: 0ddbvgsmx7.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+
+22:51:13.214 response time in milliseconds: 561
+1 < 404
+1 < Connection: keep-alive
+1 < Content-Length: 315
+1 < Content-Type: application/json
+1 < Date: Wed, 15 Aug 2018 01:51:13 GMT
+1 < X-Amzn-Trace-Id: Root=1-5b738711-c68d41542c2afcb8d0963da8;Sampled=0
+1 < x-amz-apigw-id: LpIKqHGOCYcFdgA=
+1 < x-amzn-RequestId: b08cf420-a02d-11e8-af6d-97d581d8add7
+{"errorMessage":"[NotFound] - Avenger id:idinvalidnot found","errorType":"com.iwe.avenger.lambda.exception.AvengerNotFoundException","stackTrace":["com.iwe.avengers.RemoveAvengerHandler.handleRequest(RemoveAvengerHandler.java:20)","com.iwe.avengers.RemoveAvengerHandler.handleRequest(RemoveAvengerHandler.java:1)"]}
+
+22:51:13.223 karate.env system property was: null 
+22:51:13.227 request:
 1 > PUT https://0ddbvgsmx7.execute-api.us-east-2.amazonaws.com/dev/avengers/asasa-dsdas-sadas-asdas
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -90,22 +128,22 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"name":"Hulk","secretIdentity":"Bruce Banner"}
 
-22:40:18.354 response time in milliseconds: 524
+22:51:13.796 response time in milliseconds: 569
 1 < 200
 1 < Connection: keep-alive
 1 < Content-Length: 74
 1 < Content-Type: application/json
-1 < Date: Fri, 10 Aug 2018 01:40:18 GMT
-1 < x-amz-apigw-id: LYn4WEpCCYcFtXQ=
-1 < x-amzn-RequestId: 56348d05-9c3e-11e8-b260-fb65df4599bd
+1 < Date: Wed, 15 Aug 2018 01:51:13 GMT
+1 < x-amz-apigw-id: LpIKxHkaiYcFhtw=
+1 < x-amzn-RequestId: b0ec7977-a02d-11e8-97c3-cf8ee6c7f3ad
  {
  id: "#string", 
  "name": "Hulk", 
  "secretIdentity": "Bruce Banner"
  }
 
-22:40:18.364 karate.env system property was: null 
-22:40:18.366 request:
+22:51:13.804 karate.env system property was: null 
+22:51:13.807 request:
 1 > POST https://0ddbvgsmx7.execute-api.us-east-2.amazonaws.com/dev/avengers
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -115,18 +153,18 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"secretIdentity":"Steve Rogers"}
 
-22:40:18.908 response time in milliseconds: 542
+22:51:14.302 response time in milliseconds: 495
 1 < 400
 1 < Connection: keep-alive
 1 < Content-Length: 35
 1 < Content-Type: application/json
-1 < Date: Fri, 10 Aug 2018 01:40:18 GMT
-1 < x-amz-apigw-id: LYn4cG05iYcFd1g=
-1 < x-amzn-RequestId: 56898b6a-9c3e-11e8-965d-e350312990ff
+1 < Date: Wed, 15 Aug 2018 01:51:14 GMT
+1 < x-amz-apigw-id: LpIK2ElxiYcFsFQ=
+1 < x-amzn-RequestId: b13da6d7-a02d-11e8-9103-6b0fe1053725
 {"message": "Invalid request body"}
 
-22:40:18.923 karate.env system property was: null 
-22:40:18.925 request:
+22:51:14.310 karate.env system property was: null 
+22:51:14.312 request:
 1 > PUT https://0ddbvgsmx7.execute-api.us-east-2.amazonaws.com/dev/avengers/asasa-dsdas-sadas-asdas
 1 > Accept-Encoding: gzip,deflate
 1 > Connection: Keep-Alive
@@ -136,43 +174,41 @@
 1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
 {"secretIdentity":"Steve Rogers"}
 
-22:40:19.452 response time in milliseconds: 527
+22:51:14.811 response time in milliseconds: 499
 1 < 400
 1 < Connection: keep-alive
 1 < Content-Length: 35
 1 < Content-Type: application/json
-1 < Date: Fri, 10 Aug 2018 01:40:19 GMT
-1 < x-amz-apigw-id: LYn4iGtVCYcFc0g=
-1 < x-amzn-RequestId: 56dcb477-9c3e-11e8-a67f-31f041594342
+1 < Date: Wed, 15 Aug 2018 01:51:14 GMT
+1 < x-amz-apigw-id: LpIK7H4JiYcFb_g=
+1 < x-amzn-RequestId: b18b29ea-a02d-11e8-994e-ad956bd849e5
 {"message": "Invalid request body"}
 
-.com/dev/avengers/asasa-dsdas-sadas-asdas, response: {"id":"#string","name":"Hulk","secretIdentity":"Bruce Banner"}
-                
-                                <title>Avengers: Infinity War | Trailer & Official Movie Site | Now Playing</title>
-                                <meta name="title" content="Avengers: Infinity War | Trailer & Official Movie Site">
-                                <meta name="description" content="Avengers: Infinity War | Trailer & Official Movie Site">
-                                
-                                <meta name="og:title" content="Avengers: Infinity War | Trailer & Official Movie Site">
-                                <meta property="og:type" content="video.movie">
-                                <meta property="og:url" content="http://www.marvel.com/avengers">
-                                <meta property="og:title" content="Avengers: Infinity War">
-                                <meta property="og:description" content="As Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity ...">
-                                <meta property="og:site_name" content="Avengers: Infinity War">
-                            
-                                <meta name="twitter:card" content="summary_large_image">
-                                <meta name="twitter:site" content="@Marvel">
-                                <meta name="twitter:title" content="Avengers: Infinity War">
-                                <meta name="twitter:description" content="As Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity ...">
-                                <meta name="twitter:url" content="http://www.marvel.com/avengers">
-                                <meta name="twitter:domain" content="http://www.marvel.com">
-                                
-                                <base href="https://i.annihil.us/u/prod/marvel/movies/infinitywar/">
-                            
-                            <meta property="og:image" content="https://i.annihil.us/u/prod/marvel/movies/infinitywar/images/share.jpg">
-                            <meta name="twitter:image" content="https://i.annihil.us/u/prod/marvel/movies/infinitywar/images/share.jpg">
-                            <link rel="canonical" href="http://www.marvel.com/avengers">
-                            <link rel="image_src" type="image/jpeg" href="https://i.annihil.us/u/prod/marvel/movies/infinitywar/images/share.jpg">
-                            <link rel="shortcut icon" href="https://i.annihil.us/u/prod/marvel/movies/infinitywar/images/favicon.png">
+ 8c5d7ed3-a02d-11e8-990d-0d909c2bf409
+{"message": "Invalid request body"}
+
+22:50:12.437 karate.env system property was: null 
+22:50:12.440 request:
+1 > PUT https://0ddbvgsmx7.execute-api.us-east-2.amazonaws.com/dev/avengers/asasa-dsdas-sadas-asdas
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Length: 33
+1 > Content-Type: application/json; charset=UTF-8
+1 > Host: 0ddbvgsmx7.execute-api.us-east-2.amazonaws.com
+1 > User-Agent: Apache-HttpClient/4.5.5 (Java/1.8.0_112)
+{"secretIdentity":"Steve Rogers"}
+
+22:50:12.965 response time in milliseconds: 525
+1 < 400
+1 < Connection: keep-alive
+1 < Content-Length: 35
+1 < Content-Type: application/json
+1 < Date: Wed, 15 Aug 2018 01:50:12 GMT
+1 < x-amz-apigw-id: LpIBQEJHiYcF3jw=
+1 < x-amzn-RequestId: 8cade883-a02d-11e8-9c69-3fe8fa2f407b
+{"message": "Invalid request body"}
+
+rel="shortcut icon" href="https://i.annihil.us/u/prod/marvel/movies/infinitywar/images/favicon.png">
                                 <link href="https://i.annihil.us/u/prod/marvel/s/css/30bd8023a0bd2ea1d18368e8e4dde32a.css" rel="stylesheet">
                                 <link href="https://i.annihil.us/u/prod/marvel/s/css/7e78dc308009667c6467c52cd317b7ce.css" rel="stylesheet">
                                 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,900i" rel="stylesheet">
