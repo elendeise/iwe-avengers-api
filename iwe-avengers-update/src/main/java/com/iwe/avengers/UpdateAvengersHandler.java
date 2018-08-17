@@ -21,6 +21,6 @@ public class UpdateAvengersHandler implements RequestHandler<Avenger, HandlerRes
 		}
 
 		dao.update(avenger);
-		return HandlerResponse.builder().setStatusCode(200).build();
+		return HandlerResponse.builder().setStatusCode(200).setObjectBody(avenger).build();
 	}
 }
